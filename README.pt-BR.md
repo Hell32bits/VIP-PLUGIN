@@ -339,8 +339,3 @@ Resultados exibidos ao jogador:
 | Erros de conexão MySQL | Confira host, porta, banco, usuário, senha e se o banco existe. |
 | Tab completion não lista grupos | LuckPerms indisponível ou falha ao carregar grupos; veja o console. |
 | O plugin não inicia | Procure `Falha ao habilitar o VipKeys` e o stack trace no console. |
-
-## Licença
-
-Este projeto ainda não inclui um arquivo de licença. Contate o mantenedor para saber os termos de
-uso.
