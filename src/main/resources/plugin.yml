@@ -1,0 +1,25 @@
+# Descritor do plugin para PowerNukkitX (pode se chamar plugin.yml ou powernukkitx.yml)
+name: VipKeys
+main: com.vipkeys.VipKeysPlugin
+
+# version e api DEVEM ser strings (entre aspas)
+version: "1.0.0"
+api: ["3.0.6", "3.0.6-SNAPSHOT"]
+
+load: POSTWORLD
+author: VipKeys Team
+description: Redeemable VIP keys with LuckPerms groups, item kits and LlamaEconomy rewards for PowerNukkitX.
+website: https://github.com/seu-usuario/VipKeys
+
+# Carrega o LuckPerms e o LlamaEconomy antes (se presentes), mas não exige que estejam instalados.
+softdepend:
+  - LuckPerms
+  - LlamaEconomy
+
+# Os comandos são registrados manualmente no código (getCommandMap().register),
+# então não os declaramos aqui para evitar registro duplicado.
+
+permissions:
+  vipkeys.admin:
+    description: Allows generating keys and managing VIP kits (/gerarchave, /criarkitvip, /editarkit, /listarkits, /apagarkit).
+    default: op

@@ -1,0 +1,40 @@
+# ============================================================
+#  Configuração do plugin VipKeys
+#  Documentação: https://github.com/seu-usuario/VipKeys
+# ============================================================
+
+# ------------------------------------------------------------------
+# storage.type: método de armazenamento das chaves.
+#   Valores aceitos: "yml" (padrão) ou "mysql"
+# ------------------------------------------------------------------
+storage:
+
+  # Padrão: arquivo YML dentro da pasta do plugin.
+  type: yml
+
+  # Opções do armazenamento em arquivo YML
+  yml:
+    # Nome do arquivo de chaves (relativo a plugins/VipKeys/)
+    file: chaves.yml
+    # Nome do arquivo de kits (relativo a plugins/VipKeys/)
+    kitFile: kits.yml
+
+  # Opções do armazenamento em MySQL (usado quando storage.type = mysql)
+  mysql:
+    host: localhost
+    port: 3306
+    database: vipkeys
+    username: root
+    password: ""
+    # Prefixo opcional para o nome da tabela.
+    # Ex.: "vip_" fará a tabela se chamar "vip_vip_keys".
+    tablePrefix: ""
+
+# ------------------------------------------------------------------
+# Opções de geração de chaves (opcionais, com valores padrão)
+# ------------------------------------------------------------------
+keys:
+  # Comprimento da chave gerada (padrão 12).
+  length: 12
+  # Quantidade máxima de chaves por execução do /gerarchave.
+  maxQuantity: 100
