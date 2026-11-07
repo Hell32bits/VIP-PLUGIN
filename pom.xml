@@ -31,7 +31,7 @@
             <name>PowerNukkitX Repository</name>
             <url>https://repo.powernukkitx.org/releases</url>
         </repository>
-        <!-- NOVO: snapshots do CloudburstMC (para netty-transport-nethernet, immutable, etc.) -->
+        <!-- Snapshots do CloudburstMC (netty-transport-nethernet, immutable, etc.) -->
         <repository>
             <id>opencollab-snapshots</id>
             <url>https://repo.opencollab.dev/maven-snapshots/</url>
@@ -51,6 +51,33 @@
             <artifactId>server</artifactId>
             <version>3.0.6-SNAPSHOT</version>
             <scope>provided</scope>
+            <exclusions>
+                <!-- Dependências transitivas legadas que não são necessárias para compilar o plugin -->
+                <exclusion>
+                    <groupId>com.nukkitx</groupId>
+                    <artifactId>natives</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.cloudburstmc.netty</groupId>
+                    <artifactId>netty-transport-nethernet</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.cloudburstmc.netty</groupId>
+                    <artifactId>netty-external-signaling</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>dev.opencollab</groupId>
+                    <artifactId>libdatachannel-java-arch-detect</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.cloudburstmc.math</groupId>
+                    <artifactId>immutable</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.cloudburstmc.netty</groupId>
+                    <artifactId>netty-transport-raknet</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- API do LuckPerms (fornecida pelo LuckPerms em runtime) -->
