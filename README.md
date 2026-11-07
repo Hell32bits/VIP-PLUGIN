@@ -341,8 +341,3 @@ Failure results shown to the player:
 | MySQL connection errors | Verify host, port, database, user, password and that the database exists. |
 | Tab completion does not list groups | LuckPerms is unavailable or groups failed to load; check the console. |
 | Plugin does not start | Check the console for `Falha ao habilitar o VipKeys` and the stack trace. |
-
-## License
-
-This project does not currently include a license file. Contact the project maintainer for licensing
-terms.
