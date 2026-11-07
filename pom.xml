@@ -31,11 +31,21 @@
             <name>PowerNukkitX Repository</name>
             <url>https://repo.powernukkitx.org/releases</url>
         </repository>
+        <!-- NOVO: snapshots do CloudburstMC (para netty-transport-nethernet, immutable, etc.) -->
+        <repository>
+            <id>opencollab-snapshots</id>
+            <url>https://repo.opencollab.dev/maven-snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
     </repositories>
 
     <dependencies>
         <!-- API do PowerNukkitX (fornecida pelo servidor em runtime) -->
-        <!-- Versão da API: 3.0.6 -->
         <dependency>
             <groupId>org.powernukkitx</groupId>
             <artifactId>server</artifactId>
@@ -59,11 +69,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- HikariCP: pool de conexões para o MySQL.
-             O PowerNukkitX já inclui HikariCP + SLF4J no classpath do servidor,
-             por isso usamos scope "provided".
-             Se o seu servidor NÃO incluir o HikariCP, mude o scope para "compile"
-             e adicione o maven-shade-plugin para embuti-lo no JAR (veja o README). -->
+        <!-- HikariCP: pool de conexões para o MySQL. -->
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
